@@ -55,11 +55,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+let added = sum(a, b)[0];// 11
+let added2 = sum(added,c)[0]; //11 + 5 = 16, only returns 1st index of array
+let multiplied = multiply(a, b)[0];// 28
+let multiplied2 = multiply(multiplied,c)[0]; 
+let statementProblemThreeA = `${a} and ${b} and ${c} sum to ${added2}.`;
+let statementProblemThreeB = `The product of ${a} and ${b} and ${c} is ${multiplied2}.`;
 
+return [added2, multiplied2, statementProblemThreeA, statementProblemThreeB];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 

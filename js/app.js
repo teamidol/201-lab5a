@@ -12,7 +12,7 @@ function sum(a, b) { //eslint-disable-line
   let mySum = a + b;
   let myString = `The sum of ${a} and ${b} is ${mySum}.`
 
-  return [mySum,myString];
+  return [mySum, myString];
 }
 // let testArray = [2, 3, 4]; //eslint-disable-line
 
@@ -31,15 +31,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-     let product = (a*b)
-     let productStatement = `The product of ${a} and ${b} is ${product}.`
+  let product = (a * b)
+  let productStatement = `The product of ${a} and ${b} is ${product}.`
 
-     return [product, productStatement]
+  return [product, productStatement]
 
 }
 
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(5,9);
+testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -58,18 +58,18 @@ Test this function by hand in the console to get it working, and when you think 
 function sumAndMultiply(a, b, c) { //eslint-disable-line
 
   let added = sum(a, b)[0];// 11
-  let added2 = sum(added,c)[0]; //11 + 5 = 16, only returns 1st index of array
+  let added2 = sum(added, c)[0]; //11 + 5 = 16, only returns 1st index of array
   let multiplied = multiply(a, b)[0];// 28
-  let multiplied2 = multiply(multiplied,c)[0]; 
+  let multiplied2 = multiply(multiplied, c)[0];
   let statementProblemThreeA = `${a} and ${b} and ${c} sum to ${added2}.`;
   let statementProblemThreeB = `The product of ${a} and ${b} and ${c} is ${multiplied2}.`;
-  
+
   return [added2, multiplied2, statementProblemThreeA, statementProblemThreeB];
 
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-testSumAndMultiply(4,7,5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -87,11 +87,11 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-  let added3 = (sum(sumArr[0],sumArr[1])[0]);
-  let added4 = (sum(added3,sumArr[2])[0]);
+  let added3 = (sum(sumArr[0], sumArr[1])[0]);
+  let added4 = (sum(added3, sumArr[2])[0]);
   let testArrayStrings = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${added4} is their sum.`;
 
-  return [added4,testArrayStrings];
+  return [added4, testArrayStrings];
 }
 
 
@@ -112,12 +112,17 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) { //eslint-disable-line
 
+function multiplyArray(multArr) { //eslint-disable-line
+  let multiplied3 = (multiply(multArr[0], multArr[1])[0]);
+  let multiplied4 = (multiply(multiplied3, multArr[2])[0]);
+  let problemFiveString = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multiplied4}.`;
+
+  return [multiplied4, problemFiveString];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -138,7 +143,7 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
+let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 

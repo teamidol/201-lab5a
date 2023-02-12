@@ -14,6 +14,7 @@ function sum(a, b) { //eslint-disable-line
 
   return [mySum,myString];
 }
+// let testArray = [2, 3, 4]; //eslint-disable-line
 
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
@@ -55,11 +56,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+  let added = sum(a, b)[0];// 11
+  let added2 = sum(added,c)[0]; //11 + 5 = 16, only returns 1st index of array
+  let multiplied = multiply(a, b)[0];// 28
+  let multiplied2 = multiply(multiplied,c)[0]; 
+  let statementProblemThreeA = `${a} and ${b} and ${c} sum to ${added2}.`;
+  let statementProblemThreeB = `The product of ${a} and ${b} and ${c} is ${multiplied2}.`;
+  
+  return [added2, multiplied2, statementProblemThreeA, statementProblemThreeB];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -77,12 +85,17 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
+  let added3 = (sum(sumArr[0],sumArr[1])[0]);
+  let added4 = (sum(added3,sumArr[2])[0]);
+  let testArrayStrings = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${added4} is their sum.`;
 
+  return [added4,testArrayStrings];
 }
+
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 

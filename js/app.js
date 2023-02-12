@@ -56,6 +56,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+
   let added = sum(a, b)[0];// 11
   let added2 = sum(added,c)[0]; //11 + 5 = 16, only returns 1st index of array
   let multiplied = multiply(a, b)[0];// 28
@@ -64,6 +65,7 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
   let statementProblemThreeB = `The product of ${a} and ${b} and ${c} is ${multiplied2}.`;
   
   return [added2, multiplied2, statementProblemThreeA, statementProblemThreeB];
+
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
